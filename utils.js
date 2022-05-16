@@ -9,7 +9,10 @@ const readCsv = async (SPREADSHEET_URL) => {
     .pipe(new StringStream())
     .CSVParse()
     .consume((object) => {
-      data.push(object);
+      // if there's no id and original language, it's not going to be considered
+      if (object[0] && object[1]) {
+        data.push(object);
+      }
     });
 
   return data;

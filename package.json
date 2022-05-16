@@ -3,6 +3,14 @@
   "version": "1.0.2",
   "main": "cli.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zimoo354/google-docs-translate"
+  },
+  "bugs": {
+    "url": "https://github.com/zimoo354/google-docs-translate/issues"
+  },
+  "homepage": "https://github.com/zimoo354/google-docs-translate#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "translate": "node cli.js"
