@@ -8,7 +8,6 @@
   "bin": "./cli.js",
   "dependencies": {
     "fs-extra": "^10.1.0",
-    "perf_hooks": "^0.0.1",
     "request": "^2.88.2",
     "scramjet": "^4.36.6"
   },
