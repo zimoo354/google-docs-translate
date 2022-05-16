@@ -9,8 +9,11 @@ const readCsv = async (SPREADSHEET_URL) => {
     .pipe(new StringStream())
     .CSVParse()
     .consume((object) => {
-      // if there's no id and original language, it's not going to be considered
+      if (object[0].includes("!DOCTYPE html")) {
+        throw new Error("Invalid spreadsheet");
+      }
       if (object[0] && object[1]) {
+        // if there's no id and original language, it's not going to be considered
         data.push(object);
       }
     });
@@ -53,7 +56,9 @@ const formatData = (data) => {
   return final;
 };
 
-const saveToFile = async (data, path = "./src/locales/") => {
+const saveToFile = async (data) => {
+  const path = process.env.TRANSLATE_PATH || "./src/locales/";
+
   const languages = Object.keys(data);
   for (const lang of languages) {
     await fse.outputFile(
