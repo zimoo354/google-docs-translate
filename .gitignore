@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# npm artifacts
+package-lock.json
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# testing
+coverage
+TESTS.xml
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Mac files
+.DS_Store
+
+# Editor configs
+.vscode/*
+!.vscode/extensions.json
+.history
+.idea
+
+# Build directories
+build
+dist
+
+# Relay compiler artifacts
+__generated__
+
+# Env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+translations/

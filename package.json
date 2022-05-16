@@ -1,0 +1,19 @@
+{
+  "name": "google-docs-translate",
+  "version": "1.0.2",
+  "main": "cli.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "translate": "node cli.js"
+  },
+  "bin": {
+    "translate": "node ./cli.js"
+  },
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "perf_hooks": "^0.0.1",
+    "request": "^2.88.2",
+    "scramjet": "^4.36.6"
+  }
+}
